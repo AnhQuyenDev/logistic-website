@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('/public/images/bg-body.png');
+  background-image: url('/images/bg-body.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,15 +16,15 @@ body {
 }
 
 /* Chuyển background từ body sang hero-section */
-.hero-section {
-  background-image: url('/public/images/bg-home.jpg');
+/* .hero-section {
+  background-image: url('/images/bg-home.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 700px;
   position: relative;
-}
+} */
 
 .content-overlay {
   position: absolute;
@@ -39,5 +39,4 @@ body {
 header {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem 2rem;
 }
