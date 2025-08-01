@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Logistic Web</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
   </head>
   <body>
     <div class="relative">        
@@ -42,7 +42,7 @@
                     <nav class="flex items-center justify-between py-4 -my-3 space-x-5 bg-transparent relative z-20">
                         <!-- Logo -->
                         <div class="flex-shrink-0">
-                            <img src="/images/logo.png" alt="HP Toàn Cầu Logo" class="h-32 w-auto" />
+                            <img src="/public/images/logo.png" alt="HP Toàn Cầu Logo" class="h-32 w-auto" />
                         </div>
 
                         <!-- Mobile Menu Button -->
@@ -66,8 +66,8 @@
                         <!-- Navigation Menu -->
                         <ul id="nav-menu"
                             class="md:flex flex-wrap items-start gap-x-3 gap-y-4 text-white font-bold text-base uppercase">
-                            <li><a href="#" class="my-5 text-white bg-primary p-2 rounded-md">Trang chủ</a></li>
-                            <li><a href="#" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Giới thiệu</a></li>
+                            <li><a href="index.html" class="my-5 bg-primary p-2 rounded-md">Trang chủ</a></li>
+                            <li><a href="introduction_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Giới thiệu</a></li>
                             <li><a href="#" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Vận chuyển đường biển</a></li>
                             <li><a href="#" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Vận chuyển đường hàng không</a></li>
                             <li><a href="#" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Dịch vụ hải quan và giấy phép</a></li>
@@ -96,14 +96,14 @@
                 </div>
 
                 <div class="w-1/2 hidden lg:flex justify-center items-start pt-20 z-10 my-auto">
-                    <div class="bg-primary-light bg-opacity-85 p-8 rounded-lg shadow-xl max-w-lg w-full">
+                    <div class="bg-primary-lighter bg-opacity-85 p-8 rounded-lg shadow-xl max-w-lg w-full">
                         <h3 class="text-gray-800 text-xl font-bold mb-4">TRA CỨU MÃ HS HẢI QUAN THEO MÔ TẢ THÔNG DỤNG</h3>
                         <p class="text-gray-600 text-sm mb-2">*Gõ số hiệu để tìm kiếm, ví dụ: "85021100", hoặc</p>
                         <p class="text-gray-600 text-sm mb-4">*Nhập từ khóa để tìm kiếm trong mô tả hàng hóa.</p>
                         <p class="text-gray-600 text-sm font-semibold mb-2">Ví dụ: "tổ máy phát điện"</p>
                         <input type="text" placeholder="Tìm kiếm mã hs, mô tả" class="w-full border border-gray-300 rounded-md p-3 mb-4 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
                         <div class="flex space-x-4">
-                            <button class="flex-1 bg-primary-light text-gray-700 font-semibold py-3 rounded-md hover:bg-accent-light transition duration-300">LIÊN HỆ TƯ VẤN</button>
+                            <button class="flex-1 bg-accent-light text-gray-700 font-semibold py-3 rounded-md hover:bg-orange-300 transition duration-300">LIÊN HỆ TƯ VẤN</button>
                             <button class="flex-1 bg-primary-dark text-white font-semibold py-3 rounded-md hover:bg-primary-darker transition duration-300">HS SEARCH</button>
                         </div>
                     </div>
@@ -130,11 +130,11 @@
     </div>
     
     <!-- Section: Biểu thuế -->
-    <section class="bg-primary-dark py-6 px-4 md:py-10 lg:py-1 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 lg:space-x-1">
+    <section class="bg-primary-light py-6 px-4 md:py-10 lg:py-1 flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6 lg:space-x-1">
         <!-- Box 1 -->
         <div class="flex flex-col md:flex-row items-center text-center md:text-left p-4 max-w-xl w-full">
             <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
-            <img src="/images/search-1.png" alt="Biểu thuế" class="w-20 h-20 md:w-28 md:h-28 object-contain" />
+            <img src="/public/images/search-1.png" alt="Biểu thuế" class="w-20 h-20 md:w-28 md:h-28 object-contain" />
             </div>
             <div class="flex-grow">
             <h3 class="text-white text-2xl md:text-2xl font-bold mb-2 leading-snug">Biểu thuế xuất nhập khẩu 2025</h3>
@@ -149,7 +149,7 @@
         <!-- Box 2 -->
         <div class="flex flex-col md:flex-row items-center text-center md:text-left p-4 max-w-xl w-full">
             <div class="flex-shrink-0 mb-4 md:mb-0 md:mr-6">
-            <img src="/images/master-1.png" alt="Khóa học" class="w-20 h-20 md:w-28 md:h-28 object-contain" />
+            <img src="/public/images/master-1.png" alt="Khóa học" class="w-20 h-20 md:w-28 md:h-28 object-contain" />
             </div>
             <div class="flex-grow">
             <h3 class="text-white text-2xl md:text-2xl font-bold mb-2 leading-snug">Khóa học Master ngành XNK</h3>
@@ -169,7 +169,7 @@
                 <div class="flex flex-col md:flex-row gap-4 items-center">
                     <input type="text" placeholder="Tìm theo Mã kho, Mã kho ngoại quan hoặc Cảng cửa khẩu"
                         class="w-full md:w-auto flex-grow p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700 placeholder-gray-400 text-lg" />
-                    <button class="bg-primary-dark hover:bg-primary-darker text-white font-semibold py-3 px-6 rounded-md transition duration-300 shadow-md w-full md:w-auto text-lg">
+                    <button class="bg-primary-darker hover:bg-red-800 text-white font-semibold py-3 px-6 rounded-md transition duration-300 shadow-md w-full md:w-auto text-lg">
                         Tìm kiếm
                     </button>
                 </div>
@@ -178,11 +178,11 @@
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div class="bg-primary-dark bg-opacity-80 p-6 md:p-12 rounded-lg shadow-xl flex items-center justify-between text-white cursor-pointer">
                     <h3 class="text-2xl md:text-2xl font-bold">Quy đổi CHARGEABLE WEIGHT</h3>
-                    <img src="/images/pointer-icon.png" class="h-12 w-12 md:h-24 md:w-24 object-contain">
+                    <img src="/public/images/pointer-icon.png" class="h-12 w-12 md:h-24 md:w-24 object-contain">
                 </div>
                 <div class="bg-primary-dark bg-opacity-80 p-6 md:p-8 rounded-lg shadow-xl flex items-center justify-between text-white cursor-pointer">
                     <h3 class="text-2xl md:text-2xl font-bold">Quy đổi CBM SEA LCL</h3>
-                    <img src="/images/pointer-icon.png" class="h-12 w-12 md:h-24 md:w-24 object-contain">
+                    <img src="/public/images/pointer-icon.png" class="h-12 w-12 md:h-24 md:w-24 object-contain">
                 </div>
             </div>
 
@@ -197,9 +197,9 @@
                         </h2>
                          <div class="py-12 px-4 md:px-8 lg:px-0 lg:py-0">
                             <div class="max-w-4xl mx-auto"> 
-                                <div class="bg-gray-100 p-6 rounded-lg shadow-lg  hover:bg-primary-light transition ease-in-out duration-300 group">
+                                <div class="bg-gray-100 p-6 rounded-lg shadow-lg  hover:bg-accent-light transition ease-in-out duration-300 group">
                                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-                                        <div class="bg-[url('/images/imgi_8_airplanes-background-2.jpg')] bg-center bg-[length:150%] p-6 rounded-lg shadow-lg text-white flex flex-col justify-between h-48 md:h-56 relative overflow-hidden cursor-pointer
+                                        <div class="bg-[url('/public/images/imgi_8_airplanes-background-2.jpg')] bg-center bg-[length:150%] p-6 rounded-lg shadow-lg text-white flex flex-col justify-between h-48 md:h-56 relative overflow-hidden cursor-pointer
                                                     hover:-translate-y-1
                                                     hover:shadow-black 
                                                     transition-all duration-500">
@@ -240,11 +240,11 @@
     <!-- End Section: Những kiến thức cơ bản -->
 
     <!-- Section: Dịch vụ chúng tôi mang lại -->
-    <section class="bg-gradient-to-b from-primary-dark to-primary-light relative">
+    <section class="bg-gradient-to-b from-primary-dark to-white relative">
         <div class="relative max-w-6xl mx-auto py-16 px-4 md:px-8 lg:px-16 z-10">
             
             <!-- Airplane image: nhỏ lại, sát phải -->
-            <img src="/images/img-plane.png" alt="Airplane" 
+            <img src="/public/images/img-plane.png" alt="Airplane" 
                 class="hidden lg:block absolute left-0 bottom-0 transform translate-y-1/3 w-96 opacity-80 pointer-events-none z-0" />
 
             <!-- Main content -->
@@ -262,7 +262,7 @@
                 <!-- Service card -->
                 <div class="bg-white p-2 rounded-lg shadow-lg flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="flex flex-row items-center-center gap-4 py-1 mb-4 w-full">
-                        <img src=" /images/imgi_10_cargo-1.png" class="h-10 w-10">
+                        <img src=" /public/images/imgi_10_cargo-1.png" class="h-10 w-10">
                         <h3 class="text-sm md:text-lg font-bold text-gray-800 mb-1">
                             Vận chuyển quốc tế <br> đường biển
                         </h3>
@@ -274,7 +274,7 @@
 
                 <div class="bg-white p-2 rounded-lg shadow-lg flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="flex flex-row items-center-center gap-4 py-1 mb-4 w-full">
-                        <img src=" /images/imgi_11_airplane-1.png" class="h-10 w-10">
+                        <img src=" /public/images/imgi_11_airplane-1.png" class="h-10 w-10">
                         <h3 class="text-sm md:text-lg font-bold text-gray-800 mb-2">
                             Vận chuyển quốc tế <br> đường hàng không
                         </h3>
@@ -286,7 +286,7 @@
 
                 <div class="bg-white p-2 rounded-lg shadow-lg flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="flex flex-row items-center-center gap-4 py-1 mb-4 w-full">
-                        <img src=" /images/imgi_12_declaration-of-independence-1.png" class="h-10 w-10">
+                        <img src=" /public/images/imgi_12_declaration-of-independence-1.png" class="h-10 w-10">
                          <h3 class="text-sm md:text-lg font-bold text-gray-800 mb-2">
                             Dịch vụ hải quan & Giấy <br> phép chuyên ngành
                         </h3>
@@ -298,7 +298,7 @@
 
                 <div class="bg-white p-2 rounded-lg shadow-lg flex flex-col items-center md:items-start text-center md:text-left">
                     <div class="flex flex-row items-center-center gap-4 py-1 mb-4 w-full">
-                        <img src=" /images/imgi_13_Group.png" class="h-10 w-10">
+                        <img src=" /public/images/imgi_13_Group.png" class="h-10 w-10">
                         <h3 class="text-sm md:text-lg font-bold text-gray-800 mb-2">
                             Tư vấn & Các dịch vụ <br> logistics phụ trợ khác
                         </h3>
@@ -324,12 +324,12 @@
 
                 <div class="lg:w-2/3 flex flex-col md:flex-row items-center gap-8">
                     <div class="flex-1 flex items-start text-gray-700 text-base md:text-lg leading-relaxed bg-gray-50 p-6 rounded-lg shadow-sm">
-                        <img src=" /images/imgi_14_Group-1.png" class="mx-5">
+                        <img src=" /public/images/imgi_14_Group-1.png" class="mx-5">
                         <p>Từng thành viên và tất cả tập thể HP Toàn Cầu luôn luôn tâm niệm và thể hiện các giá trị cốt lõi của tập thể Chính trực – Tận tâm – Trí tuệ trong tất cả các hoạt động của công ty.</p>
                     </div>
 
                     <div class="flex-shrink-0 flex flex-col items-center space-y-4">
-                        <img src=" /images/imgi_15_Goods.png" alt="Small Airplane" class="w-80 h-auto">
+                        <img src=" /public/images/imgi_15_Goods.png" alt="Small Airplane" class="w-80 h-auto">
                     </div>
                 </div>
             </div>
@@ -357,32 +357,32 @@
     <!-- End Section: Những con số -->
 
     <!-- Section: Footer -->
-    <footer class="bg-gradient-to-tl from-primary-light to-primary-darker text-white py-12 mt-16 md:py-5 px-4 md:px-8 lg:px-16">
+    <footer class="footer-section bg-[#0a0a0a] text-white py-12 mt-16 md:py-5 px-4 md:px-8 lg:px-16">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
                 <h3 class="font-bold text-xl mb-4">Về chúng tôi</h3>
                 <div class="flex items-center mb-4">
-                    <img src=" /images/logo.png" alt="HP Toàn Cầu Logo" class="h-16 w-auto mr-3" /> <p class="text-xl font-semibold">Công Ty TNHH <br> HP Toàn Cầu</p>
+                    <img src=" /public/images/logo.png" alt="HP Toàn Cầu Logo" class="h-16 w-auto mr-3" /> <p class="text-xl font-semibold">Công Ty TNHH <br> HP Toàn Cầu</p>
                 </div>
                 <p class="text-sm leading-relaxed mb-4">Đơn vị cung cấp dịch vụ vận chuyển quốc tế và thủ tục thông quan!</p>
-                <img src=" /images/imgi_17__dmca_premi_badge_2.png" alt="DMCA Protected" class="w-32 h-auto" /> </div>
+                <img src=" /public/images/imgi_17__dmca_premi_badge_2.png" alt="DMCA Protected" class="w-32 h-auto" /> 
+            </div>
 
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                <h3 class="font-bold text-xl mb-4">Liên kết</h3>
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4 border-b-4 border-red-800">Liên kết</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:underline">Chính sách bảo mật</a></li>
-                    <li><a href="#" class="hover:underline">Chính sách bảo hành</a></li>
-                    <li><a href="#" class="hover:underline">Hình thức thanh toán</a></li>
-                    <li><a href="#" class="hover:underline">Chính sách đổi trả</a></li>
-                    <li><a href="#" class="hover:underline">Thông tin về web</a></li>
-                    <li><a href="#" class="hover:underline">Vận chuyển và giao nhận</a></li>
-                    <li><a href="#" class="hover:underline">Đăng ký kinh doanh</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách bảo mật</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách bảo hành</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Hình thức thanh toán</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách đổi trả</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Thông tin về web</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Vận chuyển và giao nhận</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Đăng ký kinh doanh</a></li>
                 </ul>
             </div>
 
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
-                <h3 class="font-bold text-xl mb-4">Liên hệ</h3>
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4 border-b-4 border-red-800">Liên hệ</h3>
                 <ul class="space-y-2 text-sm">
                     <li>Địa chỉ : Số 13, LK3, N003, Dọc bùn 1, Khu đô thị Văn Khê, Phường Hà Đông, Hà Nội</li>
                     <li>Hotline: 088 611 5726</li>
@@ -392,12 +392,13 @@
                 </ul>
             </div>
 
-            <div class="flex flex-col items-center md:items-start text-center md:text-left">
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
                 <h3 class="font-bold text-xl mb-4">Nhận tư vấn miễn phí</h3>
                 <input type="email" placeholder="Email*" class="w-full p-3 rounded-md mb-3 bg-white bg-opacity-20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white" />
                 <textarea placeholder="Thông tin cần tư vấn" rows="3" class="w-full p-3 rounded-md mb-4 bg-white bg-opacity-20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
                 <button class="bg-primary hover:bg-primary-hover text-white font-bold py-3 px-6 rounded-md w-full transition duration-300">Tư vấn ngay</button>
-                <img src=" /images/imgi_18_Da-thong-bao.png" alt="Đã thông báo Bộ Công Thương" class="w-40 h-auto mt-6" /> </div>
+                <img src=" /public/images/imgi_18_Da-thong-bao.png" alt="Đã thông báo Bộ Công Thương" class="w-40 h-auto mt-6" /> 
+            </div>
         </div>
 
         <div class="border-t border-white border-opacity-30 mt-12 pt-6 text-center text-sm flex flex-col md:flex-row justify-center items-center gap-2 md:space-y-0">
@@ -409,8 +410,7 @@
         </div>
     </footer>
     <!-- End Section: Footer -->
-    <script type="module" src="src/main.js"></script>
-    <script type="module" src="src/renderTopics.js"></script>
-    <script type="module" src="src/toggleMenu.js"></script>
+    <script type="module" src="/src/renderTopics.js"></script>
+    <script type="module" src="/src/toggleMenu.js"></script>
   </body>
 </html>

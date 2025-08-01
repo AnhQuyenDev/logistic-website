@@ -4,27 +4,34 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('/images/bg-body.png');
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/public/images/bg-body.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100%;
-  height: auto;
   position: relative;
 }
 
-/* Chuyển background từ body sang hero-section */
-/* .hero-section {
-  background-image: url('/images/bg-home.jpg');
+.hero-section {
+  background-image: url('/public/images/bg-home.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   height: 700px;
   position: relative;
-} */
+}
+
+.hero-section-introduce {
+  background-image: url('/public/images/imgi_42_1202.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
 
 .content-overlay {
   position: absolute;
@@ -39,4 +46,12 @@ body {
 header {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.footer-section {
+  background-image: url('/public/images/Mask-group-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
