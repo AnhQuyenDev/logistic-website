@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Logistic Website</title>
+</head>
+<body>
+    <!-- Section: Header -->
+    <section class="relative">        
+        <section id="header" class="fixed top-0 left-0 w-full z-20 p-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent z-[-1] pointer-events-none"></div>
+            <header class="py-4 flex items-center justify-center md:justify-between">
+                <div class="flex flex-col">
+                    <div class="flex items-center border-b border-white space-x-4 py-1">
+                        <div class="flex items-center text-white text-sm space-x-1 ml-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+                            </svg>
+                            <span>Languages</span>
+                        </div>
+
+                        <div class="relative">
+                            <input type="text" placeholder="Search..."
+                                class="rounded-md pl-3 pr-8 py-1 bg-white/20 text-white placeholder-white/70 text-sm focus:outline-none w-32" /> 
+                            <button class="absolute right-1 top-1/2 -translate-y-1/2 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="bg-primary text-white text-sm font-semibold rounded-md px-3 py-2 text-center shadow-lg">
+                            <p>Hotline</p>
+                            <p class="text-xs font-normal">08 8611 5726</p>
+                        </div>
+                    </div>
+
+                    <nav class="flex items-center justify-between py-4 -my-3 space-x-5 bg-transparent relative z-20">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <img src="/public/images/logo.png" alt="HP Toàn Cầu Logo" class="h-32 w-auto" />
+                        </div>
+
+                        <!-- Mobile Menu Button -->
+                        <div class="md:hidden">
+                            <button id="menu-toggle" class="text-white focus:outline-none  z-50 relative">
+                                <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+
+                                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Navigation Menu -->
+                        <ul id="nav-menu"
+                            class="md:flex flex-wrap items-start gap-x-3 gap-y-4 text-white font-bold text-base uppercase">
+                            <li><a href="index.html" class="my-5 hover:bg-primary p-2 rounded-md">Trang chủ</a></li>
+                            <li><a href="introduction_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Giới thiệu</a></li>
+                            <li><a href="sea_transport_page.html" class="my-5 bg-primary p-2 rounded-md transition duration-300">Vận chuyển đường biển</a></li>
+                            <li><a href="air_freight_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Vận chuyển đường hàng không</a></li>
+                            <li><a href="services_and_licenses_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Dịch vụ hải quan và giấy phép</a></li>
+                            <li><a href="tools_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Công cụ</a></li>
+                            <li><a href="courses_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Khóa học kiến thức xuất nhập khẩu</a></li>
+                            <li><a href="contact_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </section>
+    <!-- End section: Header -->
+
+    <!-- Section : Carousel -->
+    <section class="relative z-0">
+        <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+            <!-- Carousel wrapper -->
+            <div id="carousel" class="relative min-h-[800px] sm:min-h-[500px] overflow-hidden md:h-96 clip-banner">
+                <!-- Item 1 -->
+                <div class="hidden" data-carousel-item="active">
+                    <img src="/public/images/imgi_5_1200.jpg" class="absolute block w-full h-full lg:h-fit -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="hidden sm:block fadeInRight absolute right-64 top-64 bg-gradient-to-r from-black/5 to-black/80 rounded-r-xl text-xl text-white font-bold pr-12 pl-32 py-4">
+                        DỊCH VỤ THÔNG QUAN - VẬN CHUYỂN QUỐC TẾ
+                    </div>
+                    <div class="hidden sm:block fadeInRight absolute right-0 bottom-16 bg-gradient-to-l from-black/50 to-black/80 rounded-l-xl text-xl text-white font-bold pr-32 pl-12 py-4">
+                        CÔNG TY TNHH HP TOÀN CẦU
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden" data-carousel-item>
+                    <img src="/public/images/imgi_6_16617.jpg" class="absolute block w-full h-full lg:h-fit -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <div class="hidden sm:block fadeInRight absolute right-64 top-64 bg-gradient-to-r from-black/5 to-black/80 rounded-r-xl text-xl text-white font-bold pr-12 pl-32 py-4">
+                        Tư vấn thủ tục Nhanh gọn - Đầy đủ - Tận tâm
+                    </div>
+                    <div class="hidden sm:block fadeInRight absolute right-0 bottom-16 bg-gradient-to-l from-black/50 to-black/80 rounded-l-xl text-xl text-white font-bold pr-32 pl-12 py-4">
+                        CHI PHÍ TIẾT KIỆM NHẤT
+                    </div>
+                </div>
+                <!-- Item 3 - Local Video -->
+                <div class="hidden" data-carousel-item>
+                    <video autoplay muted loop playsinline
+                        class="absolute block w-full h-full object-cover top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <source src="/public/videos/Logistics Video Background.mp4" type="video/mp4">
+                        Trình duyệt không hỗ trợ video.
+                    </video>
+                    <div class="hidden sm:block fadeInRight absolute right-64 top-64 bg-gradient-to-r from-black/5 to-black/80 rounded-r-xl text-xl text-white font-bold pr-12 pl-32 py-4">
+                        Liên hệ Hotline: 088.611.5726
+                    </div>
+                    <div class="hidden sm:block fadeInRight absolute right-0 bottom-16 bg-gradient-to-l from-black/50 to-black/80 rounded-l-xl text-xl text-white font-bold pr-32 pl-12 py-4">
+                        Email: hello@hptoancau.com
+                    </div>
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-16 left-1/2">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="2"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-12 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-12 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+    </section>
+    <!-- End Section : Carousel -->
+
+    <section class="bg-[url('/public/images/imgi_25_world-map-47959_1280.png')] bg-cover bg-center py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-[#ff8906] tracking-tight sm:text-4xl">
+                    DỊCH VỤ VẬN CHUYỂN HÀNG HÓA QUỐC TẾ ĐƯỜNG BIỂN
+                </h2>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center lg:space-x-12">
+                <div class="lg:w-1/2 mb-8 lg:mb-0">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                    HP Toàn Cầu cung cấp các dịch vụ vận chuyển đường biển quốc tế cho hàng hóa xuất nhập
+                    khẩu từ các cảng biển trên thế giới về Hải Phòng, Đà Nẵng, Hồ Chí Minh, Quy Nhơn,
+                    ... theo các phương thức giao hàng khác nhau như giao nhận hàng tại cảng (CY-CY) (CFS-CFS),
+                    giao nhận hàng tại xưởng (DOOR-CY) (CY-DOOR) và giao hàng đến tận tay người nhận (DOOR-DOOR).
+                    </p>
+
+                    <p class="text-xl font-bold text-[#ff8906] mb-4">
+                    Chúng tôi cung cấp các dịch vụ vận chuyển đường biển quốc tế toàn diện cho mọi loại
+                    hàng hóa:
+                    </p>
+
+                    <ul class="space-y-2 text-xl text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="h-5 w-5 text-[#ff8906] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Vận chuyển đường biển hàng container (FCL)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-5 w-5 text-[#ff8906] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Vận chuyển đường biển hàng lẻ (LCL)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-5 w-5 text-[#ff8906] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Vận chuyển đường biển hàng lạnh
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-5 w-5 text-[#ff8906] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Dịch vụ vận chuyển hàng dự án
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-5 w-5 text-[#ff8906] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Vận chuyển đường biển hàng siêu trường, siêu trọng
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <img class="w-full h-auto" src="/public/images/imgi_7_Untitled-design.png" alt="Vận chuyển đường biển">
+                </div>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="relative group">
+                    <img class="w-full h-48 object-cover rounded-lg shadow-lg" src="/public/images/imgi_8_tan_vu__12.jpg" alt="Cảng biển Hải Phòng">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-xl font-bold">Cảng biển Hải Phòng</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img class="w-full h-48 object-cover rounded-lg shadow-lg" src="/public/images/imgi_9_630-large-e7698c802bb516b0be68dd270e9de707.jpg" alt="Cảng biển Đà Nẵng">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-xl font-bold">Cảng biển Đà Nẵng</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img class="w-full h-48 object-cover rounded-lg shadow-lg" src="/public/images/imgi_10_5117-26352928332-e22eb76419-b.jpg" alt="Cảng biển Hồ Chí Minh">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-xl font-bold">Cảng biển Hồ Chí Minh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-white py-16 bg-[url('/public/images/imgi_24_5-2.jpg')] bg-cover bg-center">
+        <div class="p-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white bg-opacity-80 rounded-xl py-12 sm:px-4 md:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-[#f25f4c] tracking-tight sm:text-4xl">
+                        Vận chuyển nhập khẩu hàng hóa - đường biển
+                        </h2>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <div class="text-black lg:w-2/3 mb-8 lg:mb-0">
+                            <p class="text-lg leading-relaxed mb-6">
+                                Chào mừng quý khách đến với dịch vụ vận chuyển hàng hóa đường biển nhập khẩu của chúng tôi - một giải pháp toàn diện và
+                                đáng tin cậy cho mọi nhu cầu logistics của bạn đến Việt Nam.
+                            </p>
+
+                            <p class="text-lg font-bold leading-relaxed mb-6">
+                                Dịch vụ của chúng tôi không chỉ bao gồm quá trình vận chuyển hiệu quả mà còn đảm bảo tuân thủ mọi quy định hải
+                                quan và pháp luật liên quan. Đội ngũ chuyên gia tận tâm của chúng tôi luôn sẵn sàng hỗ trợ bạn từ khâu lên lịch vận
+                                tải, xử lý hải quan đến giao hàng tận nơi.
+                            </p>
+
+                            <p class="text-lg leading-relaxed mb-6">
+                                Chúng tôi cung cấp dịch vụ vận chuyển hàng hóa đường biển tại hầu hết tất cả các cảng biển tại Việt Nam, gồm: Hải Phòng
+                                (HPH); Đà Nẵng (DAD); Hồ Chí Minh (SGN); Quy Nhơn, ...
+                            </p>
+
+                            <p class="text-lg leading-relaxed mb-6">
+                                Với mạng lưới đối tác toàn cầu và hệ thống theo dõi hiện đại, chúng tôi cam kết đưa hàng hóa của bạn đến đích một cách
+                                nhanh chóng và an toàn nhất. Hãy để chúng tôi đồng hành cùng bạn trong trình nhập khẩu, để bạn có thể tập trung hoàn
+                                toàn vào phát triển kinh doanh của mình.
+                            </p>
+
+                            <p class="text-xl font-bold text-[#f25f4c] leading-relaxed">
+                                Hãy liên hệ với chúng tôi ngay hôm nay để biết thêm thông tin và nhận báo giá tốt nhất cho dịch vụ vận chuyển hàng
+                                hóa đường biển nhập khẩu của bạn!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 border-4 border-[#e3ad6f] object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_12_12.png" alt="Linh kiện, phụ tùng ô tô">
+                        <div class="absolute h-44 inset-0 bg-[#edc292] bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-black text-sm font-bold">Linh kiện, phụ tùng ô tô</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 border-4 border-[#e3ad6f] object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_13_13.png" alt="Thực phẩm thường">
+                        <div class="absolute h-44 inset-0 bg-[#edc292] bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-black text-sm font-bold">Thực phẩm thường dùng</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 border-4 border-[#e3ad6f] object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_14_14.png" alt="Mỹ phẩm">
+                        <div class="absolute h-44 inset-0 bg-[#edc292] bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-black text-sm font-bold">Mỹ phẩm</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 border-4 border-[#e3ad6f] object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_15_15.png" alt="Hàng hóa khác">
+                        <div class="absolute h-44 inset-0 bg-[#edc292] bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-black text-sm font-bold">Thiết bị y tế</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 border-4 border-[#e3ad6f] object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_16_Untitled-design-1.png" alt="Gỗ và sản phẩm gỗ">
+                        <div class="absolute h-44 inset-0 bg-[#edc292] bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-black text-sm font-bold">Hàng hoá khác</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 border-4 border-[#e3ad6f] object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_17_16.png" alt="Thiết bị y tế">
+                        <div class="absolute h-44 inset-0 bg-[#edc292] bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-black text-sm font-bold">Gỗ và sản phẩm gỗ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-white py-16 bg-[url('/public/images/imgi_48_5-2-1.jpg')] bg-cover bg-center">
+        <div class="p-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white bg-opacity-80 rounded-xl py-12 px-4 sm:px-4 md:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-[#f25f4c] tracking-tight sm:text-4xl">
+                        Vận chuyển xuất khẩu hàng hóa - đường biển
+                        </h2>
+                    </div>
+
+                    <div class="flex items-center justify-center">
+                        <div class="text-black lg:w-2/3 mb-8 lg:mb-0">
+                            <p class="text-lg leading-relaxed mb-6">
+                                Chúng tôi xin kính chào quý khách hàng với dịch vụ xuất khẩu hàng hóa đường biển của chúng tôi từ Việt Nam - một giải pháp vận chuyển linh hoạt và độc đáo để hỗ trợ kế hoạch mở rộng quốc tế của bạn. Với một đội ngũ chuyên gia chất lượng và năng động, chúng tôi cam kết đồng hành với bạn qua mọi bước trong quá trình xuất khẩu.
+                            </p>
+
+                            <p class="text-lg leading-relaxed mb-6">
+                                Dịch vụ của chúng tôi không chỉ tập trung vào việc đưa hàng hóa đến nơi đích một cách an toàn và kịp thời mà còn chú trọng đến trải nghiệm của khách hàng. Chúng tôi hiểu rằng xuất khẩu không chỉ là vận chuyển hàng hóa, mà còn là việc xử lý mọi thủ tục phức tạp, từ hải quan đến tài liệu chứng nhận.
+                            </p>
+
+                            <p class="text-lg leading-relaxed mb-6">
+                                Với sự linh hoạt và hiệu quả, chúng tôi sẽ tối ưu hóa quy trình của bạn, giảm thiểu thời gian và chi phí, từ khi hàng hóa rời khỏi cảng cho đến khi nó đến tay khách hàng. Bạn có thể tin tưởng vào khả năng của chúng tôi để tạo ra một chuỗi cung ứng xuất khẩu mạnh mẽ và bền vững cho doanh nghiệp của bạn.
+                            </p>
+
+                            <p class="text-lg leading-relaxed mb-6">
+                                Để hỗ trợ khách hàng tốt nhất, chúng tôi luôn phát triển và xây dựng mối quan hệ với các đối tác tại tất cả các quốc gia trên thế giới <span class="font-bold">(Châu Âu, Châu Á, Châu Úc, Châu Phi, Châu Mỹ). Do đó hàng hóa của bạn sẽ được vận chuyển tới mọi ngóc ngách của thế giới qua dịch vụ vận chuyển đường biển của HP Toàn Cầu.</span>
+                            </p>
+
+                            <p class="text-lg leading-relaxed mb-6">
+                                <ul class="pl-8 mb-6">
+                                    <li class="list-disc"><span class="font-bold">Bắc Mỹ:</span> Canada, USA, Greenland thuộc Đan Mạch, ...</li>
+                                    <li class="list-disc"><span class="font-bold">Nam Mỹ:</span> Peru, Venezuela, Ecuador, Guyana, Brazil, Argentina, Chile, Colombia, Bolivia, ...</li>
+                                    <li class="list-disc"><span class="font-bold">Châu Âu:</span> Nga, Ukraine, Pháp, Tây Ban Nha, Thụy Điển, Đức, Thổ Nhĩ Kỳ, Ba Lan, Ý, Anh, Bồ Đào Nha, Hy Lạp, Romania, Na Uy, Hà Làn, Bỉ, Áo, Séc, Hungary, ...</li>
+                                    <li class="list-disc"><span class="font-bold">Châu Á:</span> Trung Quốc, Nhật Bản, Ấn Độ, Hàn Quốc, Indonesia, Saudi Arabia, Đài Loan, UAE, ...</li>
+                                    <li class="list-disc"><span class="font-bold">Châu Úc:</span> Úc, New Zealand, Fiji, ...</li>
+                                    <li class="list-disc"><span class="font-bold">Châu Phi:</span> Ai Cập, Algeria, Libya, Ma-rốcBénin, Bờ Biển Ngà, Burkina Faso, Cape Verde, Gambia, ....</li>
+                                </ul>
+                            </p>
+
+                            <p class="text-xl font-bold text-[#f25f4c] leading-relaxed">
+                                Đừng ngần ngại liên hệ với chúng tôi ngay hôm nay để khám phá cách chúng tôi có thể hỗ trợ bạn vượt qua mọi thách thức trong hành trình xuất khẩu của bạn. Chúng tôi sẽ hân hạnh được làm đối tác chiến lược của bạn trên con đường quốc tế.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_9_Chau-A.jpg" alt="Linh kiện, phụ tùng ô tô">
+                        <div class="absolute h-44 inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-white text-sm font-bold">Châu Á</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_19_bandochauphi.jpg" alt="Thực phẩm thường">
+                        <div class="absolute h-44 inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-white text-sm font-bold">Châu Phi</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_7_so-sanh-dac-diem-dia-hinh-nam-mi-voi-dac-diem-dia-hinh-bac-mi.jpg" alt="Mỹ phẩm">
+                        <div class="absolute h-44 inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-white text-sm font-bold">Bắc Mĩ và Nam Mĩ</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_8_european-union-countries-map-eu-member-country-vector-24821779-e1629205125609.jpg" alt="Hàng hóa khác">
+                        <div class="absolute h-44 inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-white text-sm font-bold">Châu Âu</p>
+                        </div>
+                    </div>
+                    <div class="relative group text-center">
+                        <img class="w-full h-44 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_10_imager_2_25968_700.jpg" alt="Gỗ và sản phẩm gỗ">
+                        <div class="absolute h-44 inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="absolute bottom-1 text-white text-sm font-bold">Châu Úc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section : Carousel -->
+    <section class="bg-white p-12">
+        <!-- From Uiverse.io by PriyanshuGupta28 --> 
+        <div class="marquee">
+        <div class="marquee_header text-blue-950 font-bold">NHÀ CUNG CẤP</div>
+        <div class="marquee__inner">
+            <div class="marquee__group">
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_12_hang-tau-cosco.jpg"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_15_YANGMING-LOGO.jpg"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_25_OOCL_logo_logotype_emblem.png"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_23_image-asset.png"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_14_unnamed.jpg"></span>
+            </div>
+
+            <div class="marquee__group">
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_12_hang-tau-cosco.jpg"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_15_YANGMING-LOGO.jpg"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_25_OOCL_logo_logotype_emblem.png"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_23_image-asset.png"></span>
+                <span><img class="w-fit h-44 scale-75 object-cover rounded-lg shadow-lg mb-2" src="/public/images/imgi_14_unnamed.jpg"></span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- End Section : Carousel -->
+
+    <!-- Section: Footer -->
+    <footer class="footer-section bg-[#0a0a0a] text-white py-12 md:py-5 px-4 md:px-8 lg:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4">Về chúng tôi</h3>
+                <div class="flex items-center mb-4">
+                    <img src=" /public/images/logo.png" alt="HP Toàn Cầu Logo" class="h-16 w-auto mr-3" /> <p class="text-xl font-semibold">Công Ty TNHH <br> HP Toàn Cầu</p>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">Đơn vị cung cấp dịch vụ vận chuyển quốc tế và thủ tục thông quan!</p>
+                <img src=" /public/images/imgi_17__dmca_premi_badge_2.png" alt="DMCA Protected" class="w-32 h-auto" /> 
+            </div>
+
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4 border-b-4 border-red-800">Liên kết</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách bảo mật</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách bảo hành</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Hình thức thanh toán</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách đổi trả</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Thông tin về web</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Vận chuyển và giao nhận</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Đăng ký kinh doanh</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4 border-b-4 border-red-800">Liên hệ</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>Địa chỉ : Số 13, LK3, N003, Dọc bùn 1, Khu đô thị Văn Khê, Phường Hà Đông, Hà Nội</li>
+                    <li>Hotline: 088 611 5726</li>
+                    <li>E-mail: info@hptoancau.com</li>
+                    <li>Website: hpglobaltd.com / hptoancau.com</li>
+                    <li>MST: 0106718785</li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4">Nhận tư vấn miễn phí</h3>
+                <input type="email" placeholder="Email*" class="w-full p-3 rounded-md mb-3 bg-white bg-opacity-20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white" />
+                <textarea placeholder="Thông tin cần tư vấn" rows="3" class="w-full p-3 rounded-md mb-4 bg-white bg-opacity-20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                <button class="bg-primary hover:bg-primary-hover text-white font-bold py-3 px-6 rounded-md w-full transition duration-300">Tư vấn ngay</button>
+                <img src=" /public/images/imgi_18_Da-thong-bao.png" alt="Đã thông báo Bộ Công Thương" class="w-40 h-auto mt-6" /> 
+            </div>
+        </div>
+
+        <div class="border-t border-white border-opacity-30 mt-12 pt-6 text-center text-sm flex flex-col md:flex-row justify-center items-center gap-2 md:space-y-0">
+            <p class="border-r-2 border-white px-2">&copy; 2021. All rights reserved. Designed by INNOCOM</p>
+            <div class="flex items-center space-x-6">
+                <a href="tel:0886115726" class="border-r-2 border-white px-2 hover:underline">08.8611.5726</a>
+                <a href="http://hptoancau.com" target="_blank" class="hover:underline">hptoancau.com</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Section: Footer -->
+
+    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/toggleMenu.js"></script>
+</body>
+</html>
