@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+.bg-body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   background-image: url('/public/images/bg-body.png');
@@ -54,4 +54,43 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
+}
+
+.group-shake:hover .fa-shake-hover {
+  animation: shake 0.5s;
+}
+
+.group-shake:hover {
+  translate: 0 -5px;
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+i {
+  font-size: 40px;
+  transition: transform 0.3s;
+}
+
+/* slide transition */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-slide {
+  animation: slideDown 0.4s ease forwards;
 }

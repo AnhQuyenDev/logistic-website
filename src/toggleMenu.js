@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showMenu = () => {
         navMenu.classList.remove('hidden', 'text-base');
-        navMenu.classList.add('flex', 'flex-col', 'absolute', 'top-24', 'left-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
+        navMenu.classList.add('menu-slide','flex', 'flex-col', 'absolute', 'top-24', 'left-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
         iconOpen.classList.add('hidden');
         iconClose.classList.remove('hidden');
     };
 
     const hideMenu = () => {
         navMenu.classList.add('hidden', 'text-base');
-        navMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-24', 'left-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
+        navMenu.classList.remove('menu-slide','flex', 'flex-col', 'absolute', 'top-24', 'left-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
         iconOpen.classList.remove('hidden');
         iconClose.classList.add('hidden');
     };
