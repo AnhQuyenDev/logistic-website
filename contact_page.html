@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <title>Logistic Website</title>
+</head>
+<body>
+    <!-- Section: Header -->
+    <section class="relative">        
+        <section id="header" class="fixed top-0 left-0 w-full z-20 p-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/90 to-transparent z-[-1] pointer-events-none"></div>
+            <header class="py-4 flex items-center justify-center md:justify-between">
+                <div class="flex flex-col">
+                    <div class="flex items-center border-b border-white space-x-4 py-1">
+                        <div class="flex items-center text-white text-sm space-x-1 ml-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+                            </svg>
+                            <span>Languages</span>
+                        </div>
+
+                        <div class="relative">
+                            <input type="text" placeholder="Search..."
+                                class="rounded-md pl-3 pr-8 py-1 bg-white/20 text-white placeholder-white/70 text-sm focus:outline-none w-32" /> 
+                            <button class="absolute right-1 top-1/2 -translate-y-1/2 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <path d="M21 21l-4.35-4.35" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="bg-primary text-white text-sm font-semibold rounded-md px-3 py-2 text-center shadow-lg">
+                            <p>Hotline</p>
+                            <p class="text-xs font-normal">08 8611 5726</p>
+                        </div>
+                    </div>
+
+                    <nav class="flex items-center justify-between py-4 -my-3 space-x-5 bg-transparent relative z-20">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <img src="/public/images/logo.png" alt="HP Toàn Cầu Logo" class="h-32 w-auto" />
+                        </div>
+
+                        <!-- Mobile Menu Button -->
+                        <div class="md:hidden">
+                            <button id="menu-toggle" class="text-white focus:outline-none  z-50 relative">
+                                <svg id="icon-open" class="w-6 h-6 block" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+
+                                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Navigation Menu -->
+                        <ul id="nav-menu"
+                            class="md:flex flex-wrap items-start gap-x-3 gap-y-4 text-white font-bold text-base uppercase">
+                            <li><a href="index.html" class="my-5 hover:bg-primary p-2 rounded-md">Trang chủ</a></li>
+                            <li><a href="introduction_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Giới thiệu</a></li>
+                            <li><a href="sea_transport_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Vận chuyển đường biển</a></li>
+                            <li><a href="air_freight_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Vận chuyển đường hàng không</a></li>
+                            <li><a href="services_and_licenses_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Dịch vụ hải quan và giấy phép</a></li>
+                            <li><a href="tools_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Công cụ</a></li>
+                            <li><a href="courses_page.html" class="my-5 hover:bg-primary p-2 rounded-md transition duration-300">Khóa học kiến thức xuất nhập khẩu</a></li>
+                            <li><a href="contact_page.html" class="my-5 bg-primary p-2 rounded-md transition duration-300">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </section>
+    <!-- End section: Header -->
+
+    <section class="relative w-full h-[400px] bg-[url('/public/images/imgi_14_18.jpg')] bg-cover bg-center"></section>
+
+    <section class="relative w-full bg-[#fccccc] py-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0 flex items-center justify-center opacity-40">
+            <img src="/public/images/image.png" class="h-full w-full object-cover">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center text-black">
+            <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-wide">
+                Nhận cước vận chuyển xuất nhập khẩu nhanh chóng!
+            </h2>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">
+                Vui lòng điền các thông tin sau để chúng tôi cung cấp báo giá chi tiết cho bạn
+            </p>
+
+            <form action="#" method="POST" class="mt-12 text-left">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <input type="text" name="subject" id="subject" placeholder="Chủ đề" class="w-full bg-white/95 backdrop-blur-sm rounded-md border-0 p-4 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-orange-500 transition">
+                    </div>
+                    <div>
+                        <input type="text" name="full_name" id="full_name" placeholder="Họ tên" class="w-full bg-white/95 backdrop-blur-sm rounded-md border-0 p-4 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-orange-500 transition">
+                    </div>
+                    <div>
+                        <input type="email" name="email" id="email" placeholder="Địa chỉ email" class="w-full bg-white/95 backdrop-blur-sm rounded-md border-0 p-4 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-orange-500 transition">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" id="phone" placeholder="Nhập số điện thoại" class="w-full bg-white/95 backdrop-blur-sm rounded-md border-0 p-4 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-orange-500 transition">
+                    </div>
+                    <div class="md:col-span-2">
+                        <input type="text" name="locations" id="locations" placeholder="Điểm đi/ điểm đến cụ thể" class="w-full bg-white/95 backdrop-blur-sm rounded-md border-0 p-4 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-orange-500 transition">
+                    </div>
+                    <div class="md:col-span-2">
+                        <input type="text" name="incoterm" id="incoterm" placeholder="Điều kiện XNK (Incoterm - Fas, Exw...)" class="w-full bg-white/95 backdrop-blur-sm rounded-md border-0 p-4 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-orange-500 transition">
+                    </div>
+                    <div class="md:col-span-2">
+                        <textarea name="details" id="details" rows="5" placeholder="Thông tin chi tiết về mặt hàng (Tên cụ thể, số lượng, trọng lượng, kích thước, catalogue...)" class="w-full bg-white/95 backdrop-blur-sm rounded-md border-0 p-4 text-gray-900 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-orange-500 transition"></textarea>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <button type="submit" class="bg-[#e74c3c] hover:bg-[#c0392b] text-white font-bold uppercase tracking-wider py-3 px-10 rounded-full shadow-lg transition-all transform hover:scale-105">
+                        Gửi ngay
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="bg-[url('/public/images/bg-body.png')] bg-contain bg-center py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-8 sm:p-12">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 border-l-4 border-blue-600 pl-4">Địa điểm văn phòng</h3>
+                            <p class="mt-4 text-lg font-semibold text-gray-800">Công ty TNHH HP Toàn Cầu</p>
+                        </div>
+
+                        <div class="mt-8 text-gray-600 text-base">
+                            <p class="font-bold text-gray-700">Trụ sở chính</p>
+                            <p class="mt-1">Số 13, lô 13, KĐT Đền Lừ, P. Hoàng Văn Thụ, Q. Hoàng Mai, TP Hà Nội</p>
+
+                            <ul class="mt-6 space-y-6">
+                                <li>
+                                    <p class="font-bold text-gray-700">VP Hà Nội</p>
+                                    <p class="mt-1">Số 13, lô 13 - NO03 - KĐT Đền Lừ 1 - Khu đô thị Đền Lừ, Phường Hoàng - Hà Nội</p>
+                                </li>
+                                <li>
+                                    <p class="font-bold text-gray-700">VP Hải Phòng</p>
+                                    <p class="mt-1">Công ty TNHH HP Toàn Cầu – Chi nhánh Hải Phòng</p>
+                                    <p>Số 1 Kéo Quyết, Quán An, P.Hải Thành, TP Hải Phòng, Việt Nam</p>
+                                </li>
+                                <li>
+                                    <p class="font-bold text-gray-700">VP Đà Nẵng</p>
+                                    <p class="mt-1">Công ty TNHH HP Toàn Cầu – Chi nhánh Đà Nẵng</p>
+                                    <p>Số 56, Đường Lê Lợi, P.Hải Châu, Quận Hải Châu, Thành Phố Đà Nẵng</p>
+                                </li>
+                                <li>
+                                    <p class="font-bold text-gray-700">VP HCM</p>
+                                    <p class="mt-1">Công ty TNHH HP Toàn Cầu – VP HCM</p>
+                                    <p>201/1/10 đường Nguyễn Xí, Phường 26, quận Bình Thạnh, thành phố Hồ Chí Minh</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-12">
+                            <h3 class="text-xl font-bold text-gray-900 border-l-4 border-blue-600 pl-4">Thông tin liên lạc</h3>
+                            <dl class="mt-6 text-base text-gray-600 space-y-3">
+                                <div class="flex">
+                                    <dt class="w-24 font-semibold text-gray-800">Email:</dt>
+                                    <dd><a href="mailto:info@hptoancau.com" class="text-blue-600 hover:underline">info@hptoancau.com</a></dd>
+                                </div>
+                                <div class="flex">
+                                    <dt class="w-24 font-semibold text-gray-800">Điện thoại:</dt>
+                                    <dd><a href="tel:02432023242" class="text-blue-600 hover:underline">024 3202 3242</a></dd>
+                                </div>
+                                <div class="flex">
+                                    <dt class="w-24 font-semibold text-gray-800">Hotline:</dt>
+                                    <dd><a href="tel:0983068770" class="text-blue-600 hover:underline">0983 068 770</a></dd>
+                                </div>
+                                <div class="flex">
+                                    <dt class="w-24 font-semibold text-gray-800">Website:</dt>
+                                    <dd><a href="https://hptoancau.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">hptoancau.com</a></dd>
+                                </div>
+                            </dl>
+                        </div>
+
+                    </div>
+
+                    <div class="w-full h-full min-h-[400px] lg:min-h-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.045484083324!2d105.85049557591786!3d20.99092888924195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac1f73752841%3A0x880486259349887f!2zQ8O0bmcgVHkgVE5ISCBIUCBUb8OgbiBD4bqndQ!5e0!3m2!1sen!2svn!4v1660000000000!5m2!1sen!2svn" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: Footer -->
+    <footer class="footer-section bg-[#0a0a0a] text-white py-12 md:py-5 px-4 md:px-8 lg:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4">Về chúng tôi</h3>
+                <div class="flex items-center mb-4">
+                    <img src=" /public/images/logo.png" alt="HP Toàn Cầu Logo" class="h-16 w-auto mr-3" /> <p class="text-xl font-semibold">Công Ty TNHH <br> HP Toàn Cầu</p>
+                </div>
+                <p class="text-sm leading-relaxed mb-4">Đơn vị cung cấp dịch vụ vận chuyển quốc tế và thủ tục thông quan!</p>
+                <img src=" /public/images/imgi_17__dmca_premi_badge_2.png" alt="DMCA Protected" class="w-32 h-auto" /> 
+            </div>
+
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4 border-b-4 border-red-800">Liên kết</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách bảo mật</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách bảo hành</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Hình thức thanh toán</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Chính sách đổi trả</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Thông tin về web</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Vận chuyển và giao nhận</a></li>
+                    <li class="hover:text-red-800 hover:translate-x-1 transition duration-100"><a href="#">Đăng ký kinh doanh</a></li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4 border-b-4 border-red-800">Liên hệ</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>Địa chỉ : Số 13, LK3, N003, Dọc bùn 1, Khu đô thị Văn Khê, Phường Hà Đông, Hà Nội</li>
+                    <li>Hotline: 088 611 5726</li>
+                    <li>E-mail: info@hptoancau.com</li>
+                    <li>Website: hpglobaltd.com / hptoancau.com</li>
+                    <li>MST: 0106718785</li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col items-center my-14 md:items-start text-center md:text-left">
+                <h3 class="font-bold text-xl mb-4">Nhận tư vấn miễn phí</h3>
+                <input type="email" placeholder="Email*" class="w-full p-3 rounded-md mb-3 bg-white bg-opacity-20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white" />
+                <textarea placeholder="Thông tin cần tư vấn" rows="3" class="w-full p-3 rounded-md mb-4 bg-white bg-opacity-20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                <button class="bg-primary hover:bg-primary-hover text-white font-bold py-3 px-6 rounded-md w-full transition duration-300">Tư vấn ngay</button>
+                <img src=" /public/images/imgi_18_Da-thong-bao.png" alt="Đã thông báo Bộ Công Thương" class="w-40 h-auto mt-6" /> 
+            </div>
+        </div>
+
+        <div class="border-t border-white border-opacity-30 mt-12 pt-6 text-center text-sm flex flex-col md:flex-row justify-center items-center gap-2 md:space-y-0">
+            <p class="border-r-2 border-white px-2">&copy; 2021. All rights reserved. Designed by INNOCOM</p>
+            <div class="flex items-center space-x-6">
+                <a href="tel:0886115726" class="border-r-2 border-white px-2 hover:underline">08.8611.5726</a>
+                <a href="http://hptoancau.com" target="_blank" class="hover:underline">hptoancau.com</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Section: Footer -->
+    <script type="module" src="/src/toggleMenu.js"></script>
+</body>
+</html>
