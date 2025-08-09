@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showMenu = () => {
         navMenu.classList.remove('hidden', 'text-base');
-        navMenu.classList.add('menu-slide','flex', 'flex-col', 'absolute', 'top-24', 'left-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
+        navMenu.classList.add('menu-slide','flex', 'flex-col', 'absolute', 'top-24', 'right-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
         iconOpen.classList.add('hidden');
         iconClose.classList.remove('hidden');
     };
 
     const hideMenu = () => {
         navMenu.classList.add('hidden', 'text-base');
-        navMenu.classList.remove('menu-slide','flex', 'flex-col', 'absolute', 'top-24', 'left-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
+        navMenu.classList.remove('menu-slide','flex', 'flex-col', 'absolute', 'top-24', 'right-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
         iconOpen.classList.remove('hidden');
         iconClose.classList.add('hidden');
     };
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hideMenu();
         } else {
             navMenu.classList.remove('hidden');
-            navMenu.classList.remove('absolute', 'top-24', 'left-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
+            navMenu.classList.remove('absolute', 'top-24', 'right-0', 'w-full', 'z-30', 'p-4', 'bg-primary-darker', 'rounded-lg', 'text-sm');
             navMenu.classList.add('flex');
             iconOpen.classList.add('hidden');
             iconClose.classList.add('hidden');
