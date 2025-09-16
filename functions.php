@@ -52,7 +52,7 @@ add_action( 'init', 'hptc_register_menus' );
  * This single function handles all menu locations.
  */
 add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args ) {
-    if ( isset($args->theme_location) && $args->theme_location === 'primary-menu' ) {
+    if ( isset($args->theme_location) && $args->theme_location === 'primary_menu' ) {
         $classes = 'my-5 hover:bg-primary-dark p-2 rounded-md transition duration-300';
         if ( in_array( 'current-menu-item', $item->classes ) ) {
             $classes .= ' bg-primary-dark';
@@ -64,7 +64,7 @@ add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args ) {
 }, 10, 3 );
 
 add_filter( 'nav_menu_link_attributes', function( $atts, $item, $args ) {
-    if ( isset($args->theme_location) && $args->theme_location === 'footer-menu' ) {
+    if ( isset($args->theme_location) && $args->theme_location === 'footer_menu' ) {
         
         // Class mặc định cho tất cả link footer
         $classes = 'block transform hover:text-red-800 hover:translate-x-1 transition duration-100';

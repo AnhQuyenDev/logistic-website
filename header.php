@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php wp_title('|', true, 'right'); ?></title>
+    <title><?php wp_title('', true, 'right'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <?php wp_head(); ?>
 </head>
@@ -66,7 +66,7 @@ if ( is_front_page() || is_page('gioi-thieu') ) {
                     </div>
                     <?php 
                         wp_nav_menu( array(
-                            'theme_location' => 'primary-menu',
+                            'theme_location' => 'primary_menu',
                             'menu_id'        => 'nav-menu',
                             'container'      => 'ul',
                             'menu_class'     => 'md:flex flex-wrap items-start gap-x-3 gap-y-4 text-white font-bold text-base uppercase',

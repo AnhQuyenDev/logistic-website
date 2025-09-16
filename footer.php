@@ -14,7 +14,7 @@
                 <h3 class="font-bold text-xl mb-4 border-b-4 border-red-800">Liên kết</h3>
                 <?php 
                     wp_nav_menu( array(
-                        'theme_location' => 'footer-menu',
+                        'theme_location' => 'footer_menu',
                         'container'      => 'ul',
                         'menu_class'     => 'space-y-2 text-sm',
                     ) );
@@ -42,10 +42,10 @@
         </div>
 
         <div class="border-t border-white border-opacity-30 mt-12 pt-6 text-center text-sm flex flex-col md:flex-row justify-center items-center gap-2 md:space-y-0">
-            <p class="border-r-2 border-white px-2">&copy; 2021. All rights reserved. Designed by INNOCOM</p>
+            <p class="border-r-2 border-white px-2">&copy; 2021. All rights reserved</p>
             <div class="flex items-center space-x-6">
-                <a href="tel:0886115726" class="border-r-2 border-white px-2 hover:underline">08.8611.5726</a>
-                <a href="http://hptoancau.com" target="_blank" class="hover:underline">hptoancau.com</a>
+                <div class="border-r-2 border-white px-2 hover:underline"><?php echo do_shortcode('[business_hotline]'); ?></div>
+                <a href="" target="_blank" class="hover:underline"><?php echo do_shortcode('[business_website]'); ?></a>
             </div>
         </div>
     </footer>
