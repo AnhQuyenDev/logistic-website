@@ -89,7 +89,24 @@ Redux::setSection( $opt_name, array(
         array( 'id' => 'company_phone', 'type' => 'text', 'title' => 'Số điện thoại' ),
         array( 'id' => 'company_address', 'type' => 'textarea', 'title' => 'Địa chỉ' ),
         array( 'id' => 'company_website', 'type' => 'text', 'title' => 'Website' ),
-        array( 'id' => 'company_map', 'type' => 'text', 'title' => 'Link bản đồ' ),
+        array(
+            'id'       => 'company_map',
+            'type'     => 'textarea',
+            'title'    => 'Bản đồ Google Maps (iframe)',
+            'subtitle' => 'Dán mã nhúng (iframe) của Google Maps vào đây.',
+            'validate' => 'html_custom', // Cho phép HTML thô
+            'allowed_html' => array( // Giới hạn thẻ an toàn (iframe)
+                'iframe' => array(
+                    'src' => array(),
+                    'width' => array(),
+                    'height' => array(),
+                    'style' => array(),
+                    'allowfullscreen' => array(),
+                    'loading' => array(),
+                    'referrerpolicy' => array(),
+                ),
+            ),
+        ),
     ),
 ));
 
@@ -417,8 +434,18 @@ add_shortcode( 'business_website', function() {
 add_shortcode( 'business_map', function() {
     $o = business_info_get_options();
     if ( empty( $o['company_map'] ) ) return '';
-    return '<a href="' . esc_url( $o['company_map'] ) . '" target="_blank" rel="noopener noreferrer">Xem trên bản đồ</a>';
+
+    $map = $o['company_map'];
+
+    // Nếu người dùng dán iframe → hiển thị raw HTML
+    if ( strpos( $map, '<iframe' ) !== false ) {
+        return do_shortcode( $map ); // Cho phép render iframe
+    }
+
+    // Nếu chỉ dán link → hiển thị link bình thường
+    return '<a href="' . esc_url( $map ) . '" target="_blank" rel="noopener noreferrer">Xem trên bản đồ</a>';
 });
+
 
 add_shortcode( 'business_facebook', fn()=>business_social_link('facebook','Facebook'));
 add_shortcode( 'business_linkedin', fn()=>business_social_link('linkedin','LinkedIn'));
@@ -444,42 +471,93 @@ add_shortcode( 'business_partners', function() {
 
     ob_start();
     ?>
-    <div class="business-partners" style="display:flex;flex-wrap:wrap;gap:20px;padding:20px 0;justify-content:flex-start;align-items:flex-start;">
+    <style>
+        .business-partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .partner-item {
+            flex: 1 1 calc(20% - 20px);
+            max-width: calc(20% - 20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .partner-item-inner {
+            background: #fff;
+            border: 2px solid #e53935;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all .25s ease;
+        }
+
+        .partner-item-inner:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 10px rgba(229, 57, 53, 0.25);
+        }
+
+        .partner-item img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(30%);
+            transition: all .3s ease;
+            display: block;
+            margin: auto;
+        }
+
+        .partner-item img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        /* Tablet: 2 logo mỗi hàng */
+        @media (max-width: 992px) {
+            .partner-item {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        /* Mobile: 1 logo mỗi hàng */
+        @media (max-width: 600px) {
+            .partner-item {
+                flex: 1 1 100%;
+                max-width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <div class="business-partners">
         <?php foreach ( $partners as $p ): ?>
             <?php if ( $p->logo ): ?>
-                <div class="partner-item" style="flex:0 1 auto;text-align:left;">
-                    <div style="width:<?php echo intval($p->width); ?>px;height:<?php echo intval($p->height); ?>px;display:flex;align-items:center;justify-content:center;background:#fff;overflow:hidden;border:2px solid red;">
+                <div class="partner-item">
+                    <div class="partner-item-inner" 
+                         style="width:<?php echo intval($p->width) ?: 180; ?>px;
+                                height:<?php echo intval($p->height) ?: 150; ?>px;">
                         <?php if ( $p->website ): ?>
                             <a href="<?php echo esc_url($p->website); ?>" target="_blank" rel="noopener noreferrer">
-                                <img src="<?php echo esc_url($p->logo); ?>"
-                                     alt="<?php echo esc_attr($p->name); ?>"
-                                     style="max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(30%);transition:all .2s ease;">
+                                <img src="<?php echo esc_url($p->logo); ?>" alt="<?php echo esc_attr($p->name); ?>">
                             </a>
                         <?php else: ?>
-                            <img src="<?php echo esc_url($p->logo); ?>"
-                                 alt="<?php echo esc_attr($p->name); ?>"
-                                 style="max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(30%);transition:all .2s ease;">
+                            <img src="<?php echo esc_url($p->logo); ?>" alt="<?php echo esc_attr($p->name); ?>">
                         <?php endif; ?>
                     </div>
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.partner-item img').forEach(img => {
-                img.addEventListener('mouseover', () => {
-                    img.style.filter = 'grayscale(0%)';
-                    img.style.transform = 'scale(1.05)';
-                });
-                img.addEventListener('mouseout', () => {
-                    img.style.filter = 'grayscale(30%)';
-                    img.style.transform = 'scale(1)';
-                });
-            });
-        });
-    </script>
     <?php
     return ob_get_clean();
 });
