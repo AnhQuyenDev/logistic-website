@@ -110,15 +110,7 @@
                     </div>
 
                     <div class="w-full h-full min-h-[400px] lg:min-h-full">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.045484083324!2d105.85049557591786!3d20.99092888924195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac1f73752841%3A0x880486259349887f!2zQ8O0bmcgVHkgVE5ISCBIUCBUb8OgbiBD4bqndQ!5e0!3m2!1sen!2svn!4v1660000000000!5m2!1sen!2svn" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <?php echo do_shortcode('[business_map]'); ?>
                     </div>
                 </div>
             </div>
